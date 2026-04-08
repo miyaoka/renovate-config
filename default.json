@@ -8,6 +8,32 @@
       "description": "tsgo dev preview は日次更新のため auto-merge",
       "matchPackageNames": ["@typescript/native-preview"],
       "automerge": true
+    },
+    {
+      "description": "oxlintと関連パッケージを同時更新（peer dependency不整合を防止）",
+      "matchPackageNames": ["oxlint", "oxlint-tsgolint"],
+      "groupName": "oxlint"
+    },
+    {
+      "description": "Node.js（mise、Dockerfile、@types/node）を同時更新",
+      "matchManagers": ["mise", "dockerfile", "npm"],
+      "matchPackageNames": ["node", "@types/node"],
+      "groupName": "node-runtime",
+      "groupSlug": "node-runtime",
+      "allowedVersions": "24.x"
+    },
+    {
+      "description": "Bunとその型定義を同時更新",
+      "matchManagers": ["mise", "npm"],
+      "matchPackageNames": ["oven-sh/bun", "@types/bun"],
+      "groupName": "bun-runtime",
+      "groupSlug": "bun-runtime"
+    },
+    {
+      "description": "pnpm（mise + packageManager + Dockerfile）を同時更新",
+      "matchManagers": ["mise", "npm", "dockerfile"],
+      "matchPackageNames": ["pnpm", "pnpm/pnpm"],
+      "groupName": "pnpm-runtime"
     }
   ]
 }
