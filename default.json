@@ -1,0 +1,13 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "lockFileMaintenance": {
+    "automerge": true
+  },
+  "packageRules": [
+    {
+      "description": "tsgo dev preview は日次更新のため auto-merge",
+      "matchPackageNames": ["@typescript/native-preview"],
+      "automerge": true
+    }
+  ]
+}
