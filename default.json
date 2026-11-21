@@ -16,12 +16,12 @@
       "groupName": "oxlint"
     },
     {
-      "description": "Node.js（mise、Dockerfile、@types/node）を同時更新",
+      "description": "Node.js（mise、Dockerfile、@types/node）を同時更新し、major を 1 つの LTS に固定する",
       "matchManagers": ["mise", "dockerfile", "npm"],
       "matchPackageNames": ["node", "@types/node"],
       "groupName": "node-runtime",
       "groupSlug": "node-runtime",
-      "allowedVersions": "24.x"
+      "allowedVersions": "26.x"
     },
     {
       "description": "Bunとその型定義を同時更新",
